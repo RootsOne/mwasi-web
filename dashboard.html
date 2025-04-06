@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Médical</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: "DM Sans", sans-serif;
+        }
+
+        .heart-logo {
+            background-color: #fdf2f8;
+            border-radius: 50%;
+        }
+
+        .nav-icon {
+            min-width: 20px;
+        }
+
+        .notification-icon {
+            position: relative;
+        }
+
+        .profile-icon {
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .stat-chart {
+            max-width: 112px;
+            max-height: 112px;
+        }
+
+        .steps-graph,
+        .activity-graph {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body class="bg-neutral-100">
+    <main class="flex min-h-screen bg-neutral-100 max-md:flex-col">
+        <!-- Sidebar Navigation -->
+        <nav
+            class="flex flex-col justify-between px-6 py-8 bg-white border-r border-solid border-r-zinc-200 w-[248px] max-md:p-4 max-md:w-full">
+            <div>
+                <div class="mb-9">
+                    <div class="heart-logo w-[58px] h-[58px]"></div>
+                </div>
+                <ul class="flex flex-col gap-2.5">
+                    <li>
+                        <RouterLink to=""
+                            class="flex gap-2 items-center px-2 py-2 text-sm text-pink-400 rounded-md cursor-pointer hover:bg-pink-50">
+                            <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M14.5833 12.4999C14.2064 12.4999 13.674 12.552 13.1198 12.6279C12.8608 12.6634 12.6634 12.8608 12.6279 13.1198C12.552 13.674 12.4999 14.2064 12.4999 14.5833C12.4999 14.9601 12.552 15.4925 12.6279 16.0467C12.6634 16.3057 12.8608 16.5031 13.1198 16.5386C13.674 16.6145 14.2064 16.6666 14.5833 16.6666C14.9601 16.6666 15.4925 16.6145 16.0467 16.5386C16.3057 16.5031 16.5031 16.3057 16.5386 16.0467C16.6145 15.4925 16.6666 14.9601 16.6666 14.5833C16.6666 14.2064 16.6145 13.674 16.5386 13.1198C16.5031 12.8608 16.3057 12.6634 16.0467 12.6279C15.4925 12.552 14.9601 12.4999 14.5833 12.4999ZM12.8936 10.9767C11.8937 11.1136 11.1136 11.8937 10.9767 12.8936C10.8981 13.4671 10.8333 14.0901 10.8333 14.5833C10.8333 15.0765 10.8981 15.6994 10.9767 16.2729C11.1136 17.2728 11.8937 18.0529 12.8936 18.1898C13.4671 18.2684 14.0901 18.3333 14.5833 18.3333C15.0765 18.3333 15.6994 18.2684 16.2729 18.1898C17.2728 18.0529 18.0529 17.2728 18.1898 16.2729C18.2684 15.6994 18.3333 15.0765 18.3333 14.5833C18.3333 14.0901 18.2684 13.4671 18.1898 12.8936C18.0529 11.8937 17.2728 11.1136 16.2729 10.9767C15.6994 10.8981 15.0765 10.8333 14.5833 10.8333C14.0901 10.8333 13.4671 10.8981 12.8936 10.9767Z"
+                                    fill="#F6339A" />
+                                <!-- Rest of the SVG paths -->
+                            </svg>
+                            <span>Tableau de bord</span>
+                            </a>
+                    </li>
+                    <li>
+                        <RouterLink to=""
+                            class="flex gap-2 items-center px-2 py-2 text-sm text-pink-400 rounded-md cursor-pointer hover:bg-pink-50">
+                            <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20.1666 13.3889V18.1111C20.1666 19.3267 19.2922 20.3733 18.0866 20.5333C15.7677 20.8411 13.4022 21 11 21C8.59779 21 6.23225 20.8411 3.91338 20.5333C2.70783 20.3733 1.83339 19.3267 1.83339 18.1111V13.3889"
+                                    stroke="#FB64B6" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Dossier médicale</span>
+                            </a>
+                    </li>
+                    <li>
+                        <RouterLink to=""
+                            class="flex gap-2 items-center px-2 py-2 text-sm text-pink-400 rounded-md cursor-pointer hover:bg-pink-50">
+                            <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.879 5.519C9.05 4.494 10.95 4.494 12.121 5.519C13.293 6.544 13.293 8.206 12.121 9.231"
+                                    stroke="#FB64B6" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Requêtes</span>
+                            </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex flex-col gap-6 mt-auto">
+                <RouterLink to=""
+                    class="flex gap-2 items-center px-2 py-2 text-sm text-pink-400 rounded-md cursor-pointer hover:bg-pink-50">
+                    <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M16.6246 5.90876C16.6333 5.25784 16.3893 4.60419 15.8926 4.10752" fill="#FB64B6" />
+                    </svg>
+                    <span>Settings</span>
+                    </a>
+                    <RouterLink to=""
+                        class="flex gap-2 items-center px-2 py-2 text-sm text-pink-400 rounded-md cursor-pointer hover:bg-pink-50">
+                        <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M9.19107 12.5005C9.65098 12.4831 10.0379 12.8419 10.0552 13.3018" fill="#FB64B6" />
+                        </svg>
+                        <span>Log out</span>
+                        </a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <section class="flex-1 px-8 py-4">
+            <!-- Header -->
+            <header class="flex gap-10 justify-end items-center px-0 py-4 mb-7 max-sm:p-2.5">
+                <button class="relative" aria-label="Notifications">
+                    <svg class="notification-icon" width="20" height="24" viewBox="0 0 20 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.6 13.449V9.62358C17.5983 7.91915 16.9949 6.27033 15.8968 4.9691" fill="#7C7C8D" />
+                        <circle cx="15.3" cy="6.5" r="3.75" fill="#FF5E6F" stroke="white" stroke-width="1.5" />
+                    </svg>
+                </button>
+                <div class="profile-icon w-12 h-12 bg-gray-200 rounded-full"></div>
+            </header>
+
+            <!-- Statistics Cards -->
+            <div class="flex gap-9 mb-8 max-md:flex-col max-md:gap-5 max-sm:mx-0 max-sm:my-2.5">
+                <!-- Gestation Card -->
+                <article
+                    class="flex flex-col gap-8 items-center px-16 py-5 bg-white rounded-2xl max-md:p-4 max-sm:p-2.5">
+                    <div class="flex flex-col gap-2.5 items-center">
+                        <svg width="38" height="39" viewBox="0 0 38 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="19" cy="19.5" r="19" fill="#FDF2F8" />
+                            <path d="M19.4164 27.4215L22.5197 24.3182L21.2237 23.0054" fill="#A3004C" />
+                        </svg>
+                        <h2 class="text-2xl font-bold text-zinc-800">Gestation</h2>
+                    </div>
+                    <div class="stat-chart">
+                        <svg width="112" height="113" viewBox="0 0 112 113" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <!-- Chart SVG content -->
+                            <text x="38" y="64.684" fill="#27272A" font-family="DM Sans" font-size="24"
+                                font-weight="bold">
+                                3M
+                            </text>
+                        </svg>
+                    </div>
+                </article>
+
+                <!-- Menstrual Cycle Card -->
+                <article
+                    class="flex flex-col gap-8 items-center px-16 py-5 bg-white rounded-2xl max-md:p-4 max-sm:p-2.5">
+                    <!-- Similar structure to Gestation card -->
+                </article>
+
+                <!-- Energy Card -->
+                <article
+                    class="flex flex-col gap-8 items-center px-16 py-5 bg-white rounded-2xl max-md:p-4 max-sm:p-2.5">
+                    <!-- Similar structure to Gestation card -->
+                </article>
+
+                <!-- Amniotic Fluid Card -->
+                <article
+                    class="flex flex-col gap-8 items-center px-16 py-5 bg-white rounded-2xl max-md:p-4 max-sm:p-2.5">
+                    <!-- Similar structure to Gestation card -->
+                </article>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="flex gap-12 mb-8 max-md:flex-col max-md:gap-5">
+                <!-- Blood Pressure Chart -->
+                <section class="px-6 py-4 bg-white rounded-2xl max-md:w-full">
+                    <div
+                        class="flex justify-between items-center mb-6 text-xl font-bold text-pink-500 max-sm:flex-col max-sm:gap-2.5 max-sm:items-start">
+                        <h3>Blood pressure</h3>
+                        <div class="flex gap-2.5 items-center max-sm:justify-between max-sm:w-full">
+                            <button class="px-3 py-2.5 text-xs font-bold rounded-3xl cursor-pointer text-zinc-700">
+                                Day
+                            </button>
+                            <button class="px-3 py-2.5 text-xs font-bold rounded-3xl cursor-pointer text-zinc-700">
+                                Week
+                            </button>
+                            <button class="px-3 py-2.5 text-xs font-bold rounded-3xl cursor-pointer text-zinc-700">
+                                Month
+                            </button>
+                            <span class="text-sm font-bold text-pink-400">256 Miles</span>
+                        </div>
+                    </div>
+                    <!-- Chart content -->
+                </section>
+
+                <!-- Steps Chart -->
+                <section class="flex-1 px-6 py-4 bg-white rounded-2xl max-md:w-full">
+                    <!-- Similar structure to Blood Pressure chart -->
+                </section>
+            </div>
+
+            <!-- Gestation Activity Chart -->
+            <section class="px-6 py-5 bg-white rounded-2xl">
+                <h3 class="mb-6 text-xl font-bold text-pink-500 max-sm:gap-2.5">
+                    Gestation Activity
+                </h3>
+                <!-- Chart content -->
+            </section>
+        </section>
+    </main>
+</body>
+
+</html>
